@@ -80,19 +80,39 @@ nav ul li a:hover::after{
 .content h1{
     color: white;
     font-size: 50px;
+    animation-delay: 0.5s;
 }
 .content p{
     color: #fff;
     margin: 10px 0 30px;
     font-size: 13px;
+    animation-delay: 1s;
 }
 .content .btn{
     margin-top: 10px;
     padding: 14px 50px;
+    animation-delay: 1.5s; 
 }
 
 .feature-img{
     position: absolute;
     bottom: 0;
     right: 3%;
+}
+
+.feature-img.anim{
+    animation-delay: 2s;
+}
+
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
